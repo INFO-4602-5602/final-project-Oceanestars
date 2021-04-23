@@ -1,0 +1,23 @@
+html {
+  font-family: "Didact Gothic", sans-serif;
+  text-align: center;
+}
+header {
+  position: relative;
+  padding-top: 20px;
+}
+#intro,
+#title {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#myVid {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
