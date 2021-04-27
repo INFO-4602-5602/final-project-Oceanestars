@@ -58,34 +58,78 @@
 
     <h3 id="titleGraphAsian">Asian Population in the United States</h3>
     <section id="displayGraphAsian"></section>
-    <br />
-    <br />
-    <h3 id="titleGraph">Chinese Population in the United States</h3>
-    <section id="displayGraph"></section>
-    <br />
     <p>Pick a subgroup:</p>
     <select id="subgroupGraph" onchange="ChangeGraph()">
-      <option selected value="1">Chinese</option>
+      <option selected value="">Asian</option>
+      <option value="1">Chinese</option>
       <option value="2">Filipino</option>
       <option value="3">Indian</option>
-      <option value="4">Japenese</option>
+      <option value="4">Japanese</option>
       <option value="5">Korean</option>
       <option value="6">Vietnamese</option>
     </select>
+    <br />
+    <br />
+    <h3 id="titleGraph">Asian Hate Crime in the US</h3>
+    <section id="displayGraph"></section>
+    <br />
+    <h3 id="titleGraphCommunity">Asian restaurants & community in the US</h3>
+    <section id="displayGraphCommunity"></section>
+    <br />
+
     <script>
       (function (vegaEmbed) {
         var spec = {
           config: { view: { continuousWidth: 400, continuousHeight: 300 } },
-          data: { name: "data-b4c936cd055cee65de3e5f35a5ec1b2f" },
-          mark: "bar",
-          encoding: {
-            x: { type: "nominal", field: "States" },
-            y: { type: "quantitative", field: "Chinese" },
-          },
+          hconcat: [
+            {
+              data: {
+                url:
+                  "https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/us-10m.json",
+                format: { feature: "states", type: "topojson" },
+              },
+              mark: "geoshape",
+              encoding: {
+                color: { type: "quantitative", field: "Asian Population" },
+                opacity: {
+                  condition: { value: 1, selection: "selector008" },
+                  value: 0.2,
+                },
+                tooltip: [{ type: "quantitative", field: "Asian Population" }],
+              },
+              projection: { type: "albersUsa" },
+              selection: { selector008: { type: "multi", fields: ["state"] } },
+              transform: [
+                {
+                  lookup: "id",
+                  from: {
+                    data: { name: "data-d7f0b7f2c6591d1bff32b5fe2a179c09" },
+                    key: "id",
+                    fields: ["Asian Population", "state"],
+                  },
+                },
+              ],
+            },
+            {
+              data: { name: "data-228146593f032d567bb8c54c847787fa" },
+              mark: "bar",
+              encoding: {
+                color: { type: "quantitative", field: "Asian Population" },
+                opacity: {
+                  condition: { value: 1, selection: "selector008" },
+                  value: 0.2,
+                },
+                x: { type: "quantitative", field: "Asian Population" },
+                y: { type: "nominal", field: "States", sort: "x" },
+              },
+              selection: { selector008: { type: "multi", fields: ["state"] } },
+            },
+          ],
           $schema: "https://vega.github.io/schema/vega-lite/v4.8.1.json",
           datasets: {
-            "data-b4c936cd055cee65de3e5f35a5ec1b2f": [
+            "data-d7f0b7f2c6591d1bff32b5fe2a179c09": [
               {
+                id: 1,
                 States: "Alabama",
                 "Asian Population": 67036,
                 "Percentage Asian Population": 1.4,
@@ -102,6 +146,7 @@
                 Dropdown: "Chinese",
               },
               {
+                id: 2,
                 States: "Alaska",
                 "Asian Population": 50402,
                 "Percentage Asian Population": 7.1,
@@ -118,6 +163,7 @@
                 Dropdown: "Filipino",
               },
               {
+                id: 4,
                 States: "Arizona",
                 "Asian Population": 230907,
                 "Percentage Asian Population": 3.6,
@@ -134,6 +180,7 @@
                 Dropdown: "Indian",
               },
               {
+                id: 5,
                 States: "Arkansas",
                 "Asian Population": 44943,
                 "Percentage Asian Population": 1.5,
@@ -150,6 +197,7 @@
                 Dropdown: "Japanese",
               },
               {
+                id: 6,
                 States: "California",
                 "Asian Population": 5556592,
                 "Percentage Asian Population": 14.9,
@@ -166,6 +214,7 @@
                 Dropdown: "Korean",
               },
               {
+                id: 8,
                 States: "Colorado",
                 "Asian Population": 185589,
                 "Percentage Asian Population": 3.7,
@@ -182,6 +231,7 @@
                 Dropdown: "Vietnamese",
               },
               {
+                id: 9,
                 States: "Connecticut",
                 "Asian Population": 157088,
                 "Percentage Asian Population": 4.4,
@@ -198,6 +248,7 @@
                 Dropdown: null,
               },
               {
+                id: 10,
                 States: "Delaware",
                 "Asian Population": 33701,
                 "Percentage Asian Population": 3.8,
@@ -214,6 +265,7 @@
                 Dropdown: null,
               },
               {
+                id: 11,
                 States: "District of Columbia",
                 "Asian Population": 26857,
                 "Percentage Asian Population": 4.5,
@@ -230,6 +282,7 @@
                 Dropdown: null,
               },
               {
+                id: 12,
                 States: "Florida",
                 "Asian Population": 573083,
                 "Percentage Asian Population": 3.0,
@@ -246,6 +299,7 @@
                 Dropdown: null,
               },
               {
+                id: 13,
                 States: "Georgia",
                 "Asian Population": 365497,
                 "Percentage Asian Population": 3.8,
@@ -262,6 +316,7 @@
                 Dropdown: null,
               },
               {
+                id: 15,
                 States: "Hawaii",
                 "Asian Population": 780968,
                 "Percentage Asian Population": 57.4,
@@ -278,6 +333,7 @@
                 Dropdown: null,
               },
               {
+                id: 16,
                 States: "Idaho",
                 "Asian Population": 29698,
                 "Percentage Asian Population": 1.9,
@@ -294,6 +350,7 @@
                 Dropdown: null,
               },
               {
+                id: 17,
                 States: "Illinois",
                 "Asian Population": 668694,
                 "Percentage Asian Population": 5.2,
@@ -310,6 +367,7 @@
                 Dropdown: null,
               },
               {
+                id: 18,
                 States: "Indiana",
                 "Asian Population": 126750,
                 "Percentage Asian Population": 2.0,
@@ -326,6 +384,7 @@
                 Dropdown: null,
               },
               {
+                id: 19,
                 States: "Iowa",
                 "Asian Population": 64512,
                 "Percentage Asian Population": 2.1,
@@ -342,6 +401,7 @@
                 Dropdown: null,
               },
               {
+                id: 20,
                 States: "Kansas",
                 "Asian Population": 83930,
                 "Percentage Asian Population": 2.9,
@@ -358,6 +418,7 @@
                 Dropdown: null,
               },
               {
+                id: 21,
                 States: "Kentucky",
                 "Asian Population": 62029,
                 "Percentage Asian Population": 1.4,
@@ -374,6 +435,7 @@
                 Dropdown: null,
               },
               {
+                id: 22,
                 States: "Louisiana",
                 "Asian Population": 84335,
                 "Percentage Asian Population": 1.9,
@@ -390,6 +452,7 @@
                 Dropdown: null,
               },
               {
+                id: 23,
                 States: "Maine",
                 "Asian Population": 18333,
                 "Percentage Asian Population": 1.4,
@@ -406,6 +469,7 @@
                 Dropdown: null,
               },
               {
+                id: 24,
                 States: "Maryland",
                 "Asian Population": 370044,
                 "Percentage Asian Population": 6.4,
@@ -422,6 +486,7 @@
                 Dropdown: null,
               },
               {
+                id: 25,
                 States: "Massachusetts",
                 "Asian Population": 394211,
                 "Percentage Asian Population": 6.0,
@@ -438,6 +503,7 @@
                 Dropdown: null,
               },
               {
+                id: 26,
                 States: "Michigan",
                 "Asian Population": 289607,
                 "Percentage Asian Population": 2.9,
@@ -454,6 +520,7 @@
                 Dropdown: null,
               },
               {
+                id: 27,
                 States: "Minnesota",
                 "Asian Population": 247132,
                 "Percentage Asian Population": 4.7,
@@ -470,6 +537,7 @@
                 Dropdown: null,
               },
               {
+                id: 28,
                 States: "Mississippi",
                 "Asian Population": 32560,
                 "Percentage Asian Population": 1.1,
@@ -486,6 +554,7 @@
                 Dropdown: null,
               },
               {
+                id: 29,
                 States: "Missouri",
                 "Asian Population": 123571,
                 "Percentage Asian Population": 2.1,
@@ -502,6 +571,7 @@
                 Dropdown: null,
               },
               {
+                id: 30,
                 States: "Montana",
                 "Asian Population": 10482,
                 "Percentage Asian Population": 1.1,
@@ -518,6 +588,7 @@
                 Dropdown: null,
               },
               {
+                id: 31,
                 States: "Nebraska",
                 "Asian Population": 40561,
                 "Percentage Asian Population": 2.2,
@@ -534,6 +605,7 @@
                 Dropdown: null,
               },
               {
+                id: 32,
                 States: "Nevada",
                 "Asian Population": 242916,
                 "Percentage Asian Population": 9.0,
@@ -550,6 +622,7 @@
                 Dropdown: null,
               },
               {
+                id: 33,
                 States: "New Hampshire",
                 "Asian Population": 34522,
                 "Percentage Asian Population": 2.6,
@@ -566,6 +639,7 @@
                 Dropdown: null,
               },
               {
+                id: 34,
                 States: "New Jersey",
                 "Asian Population": 795163,
                 "Percentage Asian Population": 9.0,
@@ -582,6 +656,7 @@
                 Dropdown: null,
               },
               {
+                id: 35,
                 States: "New Mexico",
                 "Asian Population": 40456,
                 "Percentage Asian Population": 2.0,
@@ -598,6 +673,7 @@
                 Dropdown: null,
               },
               {
+                id: 36,
                 States: "New York",
                 "Asian Population": 1579494,
                 "Percentage Asian Population": 8.2,
@@ -614,6 +690,7 @@
                 Dropdown: null,
               },
               {
+                id: 37,
                 States: "North Carolina",
                 "Asian Population": 252585,
                 "Percentage Asian Population": 2.6,
@@ -630,6 +707,7 @@
                 Dropdown: null,
               },
               {
+                id: 38,
                 States: "North Dakota",
                 "Asian Population": 9193,
                 "Percentage Asian Population": 1.4,
@@ -646,6 +724,7 @@
                 Dropdown: null,
               },
               {
+                id: 39,
                 States: "Ohio",
                 "Asian Population": 238292,
                 "Percentage Asian Population": 2.1,
@@ -662,6 +741,7 @@
                 Dropdown: null,
               },
               {
+                id: 40,
                 States: "Oklahoma",
                 "Asian Population": 84170,
                 "Percentage Asian Population": 2.2,
@@ -678,6 +758,7 @@
                 Dropdown: null,
               },
               {
+                id: 41,
                 States: "Oregon",
                 "Asian Population": 186281,
                 "Percentage Asian Population": 4.9,
@@ -694,6 +775,7 @@
                 Dropdown: null,
               },
               {
+                id: 42,
                 States: "Pennsylvania",
                 "Asian Population": 402587,
                 "Percentage Asian Population": 3.2,
@@ -710,6 +792,7 @@
                 Dropdown: null,
               },
               {
+                id: 44,
                 States: "Rhode Island",
                 "Asian Population": 36763,
                 "Percentage Asian Population": 3.5,
@@ -726,6 +809,7 @@
                 Dropdown: null,
               },
               {
+                id: 45,
                 States: "South Carolina",
                 "Asian Population": 75674,
                 "Percentage Asian Population": 1.6,
@@ -742,6 +826,7 @@
                 Dropdown: null,
               },
               {
+                id: 46,
                 States: "South Dakota",
                 "Asian Population": 10216,
                 "Percentage Asian Population": 1.3,
@@ -758,6 +843,7 @@
                 Dropdown: null,
               },
               {
+                id: 47,
                 States: "Tennessee",
                 "Asian Population": 113398,
                 "Percentage Asian Population": 1.8,
@@ -774,6 +860,7 @@
                 Dropdown: null,
               },
               {
+                id: 48,
                 States: "Texas",
                 "Asian Population": 1110666,
                 "Percentage Asian Population": 4.4,
@@ -790,6 +877,7 @@
                 Dropdown: null,
               },
               {
+                id: 49,
                 States: "Utah",
                 "Asian Population": 77748,
                 "Percentage Asian Population": 2.8,
@@ -806,6 +894,7 @@
                 Dropdown: null,
               },
               {
+                id: 50,
                 States: "Vermont",
                 "Asian Population": 10463,
                 "Percentage Asian Population": 1.7,
@@ -822,6 +911,7 @@
                 Dropdown: null,
               },
               {
+                id: 51,
                 States: "Virginia",
                 "Asian Population": 522199,
                 "Percentage Asian Population": 6.5,
@@ -838,6 +928,7 @@
                 Dropdown: null,
               },
               {
+                id: 53,
                 States: "Washington",
                 "Asian Population": 604251,
                 "Percentage Asian Population": 9.0,
@@ -854,6 +945,7 @@
                 Dropdown: null,
               },
               {
+                id: 54,
                 States: "West Virginia",
                 "Asian Population": 16465,
                 "Percentage Asian Population": 0.9,
@@ -870,6 +962,7 @@
                 Dropdown: null,
               },
               {
+                id: 55,
                 States: "Wisconsin",
                 "Asian Population": 151513,
                 "Percentage Asian Population": 2.7,
@@ -886,6 +979,7 @@
                 Dropdown: null,
               },
               {
+                id: 56,
                 States: "Wyoming",
                 "Asian Population": 6729,
                 "Percentage Asian Population": 1.2,
@@ -899,6 +993,263 @@
                 MostSubgroup: "Filipino",
                 Latitude: 42.755966,
                 Longitude: -107.30249,
+                Dropdown: null,
+              },
+            ],
+            "data-228146593f032d567bb8c54c847787fa": [
+              {
+                id: 6,
+                States: "California",
+                "Asian Population": 5556592,
+                "Percentage Asian Population": 14.9,
+                Chinese: 1451537,
+                Filipino: 1474707,
+                Indian: 590445,
+                Japanese: 428014,
+                Korean: 505225,
+                Vietnamese: 647589,
+                "Other Asians": 459075,
+                MostSubgroup: "Filipino",
+                Latitude: 36.116203,
+                Longitude: -119.681564,
+                Dropdown: "Korean",
+              },
+              {
+                id: 36,
+                States: "New York",
+                "Asian Population": 1579494,
+                "Percentage Asian Population": 8.2,
+                Chinese: 615932,
+                Filipino: 126129,
+                Indian: 368767,
+                Japanese: 51781,
+                Korean: 153609,
+                Vietnamese: 34510,
+                "Other Asians": 228763,
+                MostSubgroup: "Chinese",
+                Latitude: 42.165726,
+                Longitude: -74.948051,
+                Dropdown: null,
+              },
+              {
+                id: 48,
+                States: "Texas",
+                "Asian Population": 1110666,
+                "Percentage Asian Population": 4.4,
+                Chinese: 182477,
+                Filipino: 137713,
+                Indian: 269327,
+                Japanese: 37715,
+                Korean: 85332,
+                Vietnamese: 227968,
+                "Other Asians": 170134,
+                MostSubgroup: "Indian",
+                Latitude: 31.054487,
+                Longitude: -97.563461,
+                Dropdown: null,
+              },
+              {
+                id: 34,
+                States: "New Jersey",
+                "Asian Population": 795163,
+                "Percentage Asian Population": 9.0,
+                Chinese: 149356,
+                Filipino: 126793,
+                Indian: 311310,
+                Japanese: 19710,
+                Korean: 100334,
+                Vietnamese: 23535,
+                "Other Asians": 64125,
+                MostSubgroup: "Indian",
+                Latitude: 40.298904,
+                Longitude: -74.521011,
+                Dropdown: null,
+              },
+              {
+                id: 15,
+                States: "Hawaii",
+                "Asian Population": 780968,
+                "Percentage Asian Population": 57.4,
+                Chinese: 199751,
+                Filipino: 342095,
+                Indian: 4737,
+                Japanese: 312292,
+                Korean: 48699,
+                Vietnamese: 13266,
+                "Other Asians": 139872,
+                MostSubgroup: "Filipino",
+                Latitude: 21.094318,
+                Longitude: -157.498337,
+                Dropdown: null,
+              },
+              {
+                id: 17,
+                States: "Illinois",
+                "Asian Population": 668694,
+                "Percentage Asian Population": 5.2,
+                Chinese: 119308,
+                Filipino: 139090,
+                Indian: 203669,
+                Japanese: 28623,
+                Korean: 70263,
+                Vietnamese: 29101,
+                "Other Asians": 78640,
+                MostSubgroup: "Indian",
+                Latitude: 40.349457,
+                Longitude: -88.986137,
+                Dropdown: null,
+              },
+              {
+                id: 53,
+                States: "Washington",
+                "Asian Population": 604251,
+                "Percentage Asian Population": 9.0,
+                Chinese: 120814,
+                Filipino: 137083,
+                Indian: 68978,
+                Japanese: 67597,
+                Korean: 80049,
+                Vietnamese: 75843,
+                "Other Asians": 53887,
+                MostSubgroup: "Filipino",
+                Latitude: 47.400902,
+                Longitude: -121.490494,
+                Dropdown: null,
+              },
+              {
+                id: 12,
+                States: "Florida",
+                "Asian Population": 573083,
+                "Percentage Asian Population": 3.0,
+                Chinese: 94244,
+                Filipino: 122691,
+                Indian: 151438,
+                Japanese: 25747,
+                Korean: 35629,
+                Vietnamese: 65772,
+                "Other Asians": 77562,
+                MostSubgroup: "Indian",
+                Latitude: 27.766279,
+                Longitude: -81.686783,
+                Dropdown: null,
+              },
+              {
+                id: 51,
+                States: "Virginia",
+                "Asian Population": 522199,
+                "Percentage Asian Population": 6.5,
+                Chinese: 72585,
+                Filipino: 90493,
+                Indian: 114471,
+                Japanese: 20138,
+                Korean: 82006,
+                Vietnamese: 59984,
+                "Other Asians": 82522,
+                MostSubgroup: "Indian",
+                Latitude: 37.769337,
+                Longitude: -78.169968,
+                Dropdown: null,
+              },
+              {
+                id: 42,
+                States: "Pennsylvania",
+                "Asian Population": 402587,
+                "Percentage Asian Population": 3.2,
+                Chinese: 96606,
+                Filipino: 33021,
+                Indian: 113389,
+                Japanese: 12699,
+                Korean: 47429,
+                Vietnamese: 44605,
+                "Other Asians": 54838,
+                MostSubgroup: "Indian",
+                Latitude: 40.590752,
+                Longitude: -77.209755,
+                Dropdown: null,
+              },
+              {
+                id: 25,
+                States: "Massachusetts",
+                "Asian Population": 394211,
+                "Percentage Asian Population": 6.0,
+                Chinese: 136866,
+                Filipino: 18673,
+                Indian: 85441,
+                Japanese: 15358,
+                Korean: 28904,
+                Vietnamese: 47636,
+                "Other Asians": 61343,
+                MostSubgroup: "Chinese",
+                Latitude: 42.230171,
+                Longitude: -71.530106,
+                Dropdown: null,
+              },
+              {
+                id: 24,
+                States: "Maryland",
+                "Asian Population": 370044,
+                "Percentage Asian Population": 6.4,
+                Chinese: 79660,
+                Filipino: 56909,
+                Indian: 88709,
+                Japanese: 12826,
+                Korean: 55051,
+                Vietnamese: 26605,
+                "Other Asians": 50284,
+                MostSubgroup: "Indian",
+                Latitude: 39.063946,
+                Longitude: -76.802101,
+                Dropdown: null,
+              },
+              {
+                id: 13,
+                States: "Georgia",
+                "Asian Population": 365497,
+                "Percentage Asian Population": 3.8,
+                Chinese: 54298,
+                Filipino: 28528,
+                Indian: 105444,
+                Japanese: 14247,
+                Korean: 60836,
+                Vietnamese: 49264,
+                "Other Asians": 52880,
+                MostSubgroup: "Indian",
+                Latitude: 33.040619,
+                Longitude: -83.643074,
+                Dropdown: null,
+              },
+              {
+                id: 26,
+                States: "Michigan",
+                "Asian Population": 289607,
+                "Percentage Asian Population": 2.9,
+                Chinese: 51525,
+                Filipino: 32324,
+                Indian: 84750,
+                Japanese: 17412,
+                Korean: 30292,
+                Vietnamese: 19456,
+                "Other Asians": 53848,
+                MostSubgroup: "Indian",
+                Latitude: 43.326618,
+                Longitude: -84.536095,
+                Dropdown: null,
+              },
+              {
+                id: 37,
+                States: "North Carolina",
+                "Asian Population": 252585,
+                "Percentage Asian Population": 2.6,
+                Chinese: 40820,
+                Filipino: 29314,
+                Indian: 63852,
+                Japanese: 12878,
+                Korean: 25420,
+                Vietnamese: 30665,
+                "Other Asians": 49636,
+                MostSubgroup: "Indian",
+                Latitude: 35.630066,
+                Longitude: -79.806419,
                 Dropdown: null,
               },
             ],
@@ -917,8 +1268,8 @@
             "</div>";
           throw error;
         }
-        const el = document.getElementById("displayGraph");
-        vegaEmbed("#displayGraph", spec, embedOpt).catch((error) =>
+        const el = document.getElementById("displayGraphAsian");
+        vegaEmbed("#displayGraphAsian", spec, embedOpt).catch((error) =>
           showError(el, error)
         );
       })(vegaEmbed);
