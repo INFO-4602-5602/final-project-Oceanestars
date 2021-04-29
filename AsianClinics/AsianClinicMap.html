@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "hconcat": [{"data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/us-10m.json", "format": {"feature": "states", "type": "topojson"}}, "mark": "geoshape", "encoding": {"color": {"type": "quantitative", "field": "Number of Clinic"}, "opacity": {"condition": {"value": 1, "selection": "selector007"}, "value": 0.2}, "tooltip": [{"type": "nominal", "field": "state"}, {"type": "quantitative", "field": "Number of Clinic"}]}, "projection": {"type": "albersUsa"}, "selection": {"selector007": {"type": "multi", "fields": ["state"]}}, "transform": [{"lookup": "id", "from": {"data": {"name": "data-5b7f0878cabf061290e404caee5ae374"}, "key": "id", "fields": ["Number of Clinic", "state"]}}]}, {"data": {"name": "data-db3166f2dd6fec2f454402832348f9fa"}, "mark": "bar", "encoding": {"color": {"type": "quantitative", "field": "Number of Clinic"}, "opacity": {"condition": {"value": 1, "selection": "selector007"}, "value": 0.2}, "tooltip": [{"type": "nominal", "field": "state"}, {"type": "quantitative", "field": "Number of Clinic"}], "x": {"type": "quantitative", "field": "Number of Clinic"}, "y": {"type": "nominal", "field": "state", "sort": "x"}}, "selection": {"selector007": {"type": "multi", "fields": ["state"]}}, "title": "Top 15 States by Number of Clinic"}], "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-5b7f0878cabf061290e404caee5ae374": [{"id": 1, "state": "Alabama", "Number of Clinic": 0}, {"id": 2, "state": "Alaska", "Number of Clinic": 0}, {"id": 4, "state": "Arizona", "Number of Clinic": 0}, {"id": 5, "state": "Arkansas", "Number of Clinic": 0}, {"id": 6, "state": "California", "Number of Clinic": 170}, {"id": 8, "state": "Colorado", "Number of Clinic": 0}, {"id": 9, "state": "Connecticut", "Number of Clinic": 0}, {"id": 10, "state": "Delaware", "Number of Clinic": 0}, {"id": 11, "state": "District of Columbia", "Number of Clinic": 0}, {"id": 12, "state": "Florida", "Number of Clinic": 2}, {"id": 13, "state": "Georgia", "Number of Clinic": 0}, {"id": 15, "state": "Hawaii", "Number of Clinic": 0}, {"id": 16, "state": "Idaho", "Number of Clinic": 0}, {"id": 17, "state": "Illinois", "Number of Clinic": 2}, {"id": 18, "state": "Indiana", "Number of Clinic": 0}, {"id": 19, "state": "Iowa", "Number of Clinic": 0}, {"id": 20, "state": "Kansas", "Number of Clinic": 0}, {"id": 21, "state": "Kentucky", "Number of Clinic": 0}, {"id": 22, "state": "Louisiana", "Number of Clinic": 0}, {"id": 23, "state": "Maine", "Number of Clinic": 0}, {"id": 24, "state": "Maryland", "Number of Clinic": 2}, {"id": 25, "state": "Massachusetts", "Number of Clinic": 6}, {"id": 26, "state": "Michigan", "Number of Clinic": 0}, {"id": 27, "state": "Minnesota", "Number of Clinic": 0}, {"id": 28, "state": "Mississippi", "Number of Clinic": 0}, {"id": 29, "state": "Missouri", "Number of Clinic": 0}, {"id": 30, "state": "Montana", "Number of Clinic": 0}, {"id": 31, "state": "Nebraska", "Number of Clinic": 0}, {"id": 32, "state": "Nevada", "Number of Clinic": 0}, {"id": 33, "state": "New Hampshire", "Number of Clinic": 0}, {"id": 34, "state": "New Jersey", "Number of Clinic": 2}, {"id": 35, "state": "New Mexico", "Number of Clinic": 0}, {"id": 36, "state": "New York", "Number of Clinic": 23}, {"id": 37, "state": "North Carolina", "Number of Clinic": 0}, {"id": 38, "state": "North Dakota", "Number of Clinic": 0}, {"id": 39, "state": "Ohio", "Number of Clinic": 0}, {"id": 40, "state": "Oklahoma", "Number of Clinic": 0}, {"id": 41, "state": "Oregon", "Number of Clinic": 0}, {"id": 42, "state": "Pennsylvania", "Number of Clinic": 4}, {"id": 44, "state": "Rhode Island", "Number of Clinic": 1}, {"id": 45, "state": "South Carolina", "Number of Clinic": 0}, {"id": 46, "state": "South Dakota", "Number of Clinic": 0}, {"id": 47, "state": "Tennessee", "Number of Clinic": 0}, {"id": 48, "state": "Texas", "Number of Clinic": 0}, {"id": 49, "state": "Utah", "Number of Clinic": 0}, {"id": 50, "state": "Vermont", "Number of Clinic": 0}, {"id": 51, "state": "Virginia", "Number of Clinic": 0}, {"id": 53, "state": "Washington", "Number of Clinic": 2}, {"id": 54, "state": "West Virginia", "Number of Clinic": 0}, {"id": 55, "state": "Wisconsin", "Number of Clinic": 0}, {"id": 56, "state": "Wyoming", "Number of Clinic": 0}, {"id": 72, "state": "Puerto Rico", "Number of Clinic": 0}], "data-db3166f2dd6fec2f454402832348f9fa": [{"id": 6, "state": "California", "Number of Clinic": 170}, {"id": 36, "state": "New York", "Number of Clinic": 23}, {"id": 25, "state": "Massachusetts", "Number of Clinic": 6}, {"id": 42, "state": "Pennsylvania", "Number of Clinic": 4}, {"id": 12, "state": "Florida", "Number of Clinic": 2}, {"id": 17, "state": "Illinois", "Number of Clinic": 2}, {"id": 24, "state": "Maryland", "Number of Clinic": 2}, {"id": 34, "state": "New Jersey", "Number of Clinic": 2}, {"id": 53, "state": "Washington", "Number of Clinic": 2}, {"id": 44, "state": "Rhode Island", "Number of Clinic": 1}, {"id": 1, "state": "Alabama", "Number of Clinic": 0}, {"id": 2, "state": "Alaska", "Number of Clinic": 0}, {"id": 4, "state": "Arizona", "Number of Clinic": 0}, {"id": 5, "state": "Arkansas", "Number of Clinic": 0}, {"id": 8, "state": "Colorado", "Number of Clinic": 0}]}};
+      var embedOpt = {"render": "svg", "mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
