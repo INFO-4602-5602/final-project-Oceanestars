@@ -1,0 +1,51 @@
+name,categories.0.alias,categories.0.title,coordinates.latitude,coordinates.longitude,location.address1,location.city,location.zip_code,location.country,location.state,categories.1.alias,categories.1.title,categories.2.alias,categories.2.title
+Bahay Kubo Restaurant,filipino,Filipino,61.19248,-149.91355,3020 Minnesota Dr,Anchorage,99503,US,AK,asianfusion,Asian Fusion,,
+Charlie's Bakery,bakeries,Dim Sum,61.19602,-149.88634,2729 C St,Anchorage,99503,US,AK,dimsum,Dim Sum,soup,Soup
+China Town Restaurant,chinese,Chinese,61.231089,-149.874132,836 E Loop Rd,Anchorage,99501,US,AK,,,,
+Dami,japanese,Japanese,61.21728,-149.87152,642 E 5th Ave,Anchorage,99501,US,AK,korean,Korean,sushi,Sushi Bars
+Familia,asianfusion,Asian Fusion,61.138543,-149.881641,148 W 91st Ave,Anchorage,99515,US,AK,,,,
+Fukumaru Teriyaki,japanese,Japanese,61.17986679,-149.9376831,4505 Spenard Rd,Anchorage,99517,US,AK,,,,
+Gia Dinh Pho and Vietnamese Cuisine,vietnamese,Vietnamese,61.174306,-149.893998,549 W International Airport Rd,Anchorage,99518,US,AK,,,,
+Ginger,asianfusion,Asian Fusion,61.21768,-149.89047,425 W 5th Ave,Anchorage,99501,US,AK,cocktailbars,Cocktail Bars,,
+Home Town Restaurant,korean,Korean,61.192841,-149.915417,3020 Minnesota Dr,Anchorage,99503,US,AK,bbq,Barbeque,seafood,Seafood
+Hong Kong Spirit Food,dimsum,Dim Sum,61.1723713,-149.8937504,570 W 53rd Ave,Anchorage,99518,US,AK,,,,
+Jimmy's Asian Food,sushi,Sushi Bars,61.18014745,-149.8934215,550 W Tudor Rd,Anchorage,99503,US,AK,szechuan,Szechuan,,
+Jinmi Korean Restaurant,korean,Korean,61.179853,-149.93797,4505 Spenard Rd,Anchorage,99517,US,AK,,,,
+Korean Garden,korean,Korean,61.144356,-149.876805,300 E Dimond Blvd,Anchorage,99515,US,AK,,,,
+Kumagoro,japanese,Japanese,61.21883392,-149.8928375,533 W 4th Ave,Anchorage,99501,US,AK,,,,
+Lahn Pad Thai,thai,Thai,61.13821,-149.8433,2101 Abbott Rd,Anchorage,99507,US,AK,,,,
+Lime Leaf,asianfusion,Asian Fusion,61.33762,-149.564498,12940 Old Glenn Hwy,Anchorage,99577,US,AK,,,,
+Mekong Pho,thai,Thai,61.22442833,-149.8059817,4015 Mountain View Dr,Anchorage,99508,US,AK,laotian,Laotian,asianfusion,Asian Fusion
+Miso Sushi,japanese,Japanese,61.14503,-149.86128,1111 East Dimond Blvd,Anchorage,99515,US,AK,sushi,Sushi Bars,,
+myThai Downtown Restaurant,thai,Thai,61.21861609,-149.889197,333 W 4th Ave,Anchorage,99501,US,AK,,,,
+Naruto Japanese Restaurant,ramen,Ramen,61.18776321,-149.9137268,3600 Minnesota Dr,Anchorage,99503,US,AK,,,,
+Oriental Garden,chinese,Chinese,61.21540833,-149.7342987,720 Muldoon Rd,Anchorage,99504,US,AK,bars,Bars,karaoke,Karaoke
+Papaya Tree,foodtrucks,Thai,61.14499033,-149.8769411,301 E Dimond Blvd,Anchorage,99515,US,AK,laotian,Laotian,thai,Thai
+Pho Dimond,vietnamese,Vietnamese,61.1458,-149.88159,135 W Dimond Blvd,Anchorage,99515,US,AK,,,,
+Pho Lena,vietnamese,Vietnamese,61.1899082,-149.9074355,3311 Spenard Rd,Anchorage,99503,US,AK,thai,Thai,laotian,Laotian
+Pho Lena Downtown,thai,Thai,61.21786,-149.88478,137 W 5th Ave,Anchorage,99501,US,AK,laotian,Laotian,vietnamese,Vietnamese
+Pho Tommy,vietnamese,Vietnamese,61.223119,-149.73219,171 Muldoon Rd,Anchorage,99504,US,AK,thai,Thai,laotian,Laotian
+Pho Vietnam,vietnamese,Vietnamese,61.192877,-149.877546,3030 Denali St,Anchorage,99503,US,AK,,,,
+Pho Vietnam 8,vietnamese,Vietnamese,61.19767,-149.87205,602 E Fireweed Ln,Anchorage,99503,US,AK,thai,Thai,seafood,Seafood
+Phonatik,vietnamese,Vietnamese,61.145624,-149.867048,901 E Dimond Ave,Anchorage,99515,US,AK,wine_bars,Wine Bars,beerbar,Beer Bar
+Ramen House,ramen,Ramen,61.1985829,-149.881635,149 E Fireweed Ln,Anchorage,99503,US,AK,,,,
+Ray's Place,vietnamese,Vietnamese,61.198627,-149.905975,2412 Spenard Rd,Anchorage,99503,US,AK,,,,
+Seoul Casa,korean,Korean,61.14562169,-149.8692149,601 E Dimond Blvd,Anchorage,99515,US,AK,mexican,Mexican,,
+Siam Cuisine,thai,Thai,61.138419,-149.915939,1911 W Dimond Blvd,Anchorage,99515,US,AK,vietnamese,Vietnamese,,
+Silk,japanese,Japanese,61.19273,-149.87515,500 E Benson Blvd,Anchorage,99503,US,AK,chinese,Chinese,korean,Korean
+So Thai,thai,Thai,61.19737799,-149.9058288,2602 Spenard Rd,Anchorage,99503,US,AK,streetvendors,Street Vendors,,
+Souper Bowl,hotdogs,Asian Fusion,61.21744,-149.88876,320 W 5th Ave,Anchorage,99501,US,AK,asianfusion,Asian Fusion,,
+Sushi & Sushi,sushi,Sushi Bars,61.18973,-149.8702,3337 Fairbanks St,Anchorage,99503,US,AK,japanese,Japanese,,
+Sushi On The Fly,sushi,Sushi Bars,61.175552,-149.983588,5000 W International Airport Rd,Anchorage,99502,US,AK,asianfusion,Asian Fusion,japanese,Japanese
+Tempura Express,asianfusion,Asian Fusion,61.21966934,-149.8227234,3024 Mountain View Dr,Anchorage,99501,US,AK,,,,
+Thai Delight Restaurant,thai,Thai,61.18767121,-149.8972497,3609 Arctic Blvd,Anchorage,99503,US,AK,,,,
+Thai Orchid,thai,Thai,61.16728066,-149.8376983,5905 Lake Otis Pkwy,Anchorage,99507,US,AK,,,,
+Thai Village Restaurant,thai,Thai,61.21362,-149.73424,954 Muldoon Rd,Anchorage,99504,US,AK,vegetarian,Vegetarian,,
+The Hott Spot,seafood,Hot Pot,61.20986,-149.76232,6311 Debarr Rd,Anchorage,99504,US,AK,hotpot,Hot Pot,asianfusion,Asian Fusion
+Tofu House,korean,Korean,61.1742852,-149.8968746,5121 Arctic Blvd,Anchorage,99503,US,AK,asianfusion,Asian Fusion,,
+Top Bop - Midtown,korean,Korean,61.192489,-149.914212,3020 Minnesota Dr,Anchorage,99503,US,AK,hotdogs,Fast Food,asianfusion,Asian Fusion
+Top Bop - Muldoon,asianfusion,Asian Fusion,61.22177,-149.73382,220 Muldoon Rd,Anchorage,99504,US,AK,korean,Korean,hotdogs,Fast Food
+TOZAI,asianfusion,Asian Fusion,61.17396544,-149.8956317,639 W International Airport Rd,Anchorage,99518,US,AK,,,,
+Vip Restaurant,korean,Korean,61.19572449,-149.8940735,555 W Northern Lights Blvd,Anchorage,99503,US,AK,chinese,Chinese,,
+Wonjo Korean Cuisine,korean,Korean,61.19874147,-149.891205,515 W Fireweed Ln,Anchorage,99503,US,AK,,,,
+Yamaya Seafood Restaurant,seafood,Japanese,61.21686,-149.89865,825 W 6th Ave,Anchorage,99501,US,AK,japanese,Japanese,,

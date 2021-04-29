@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm//vega@5"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm//vega-embed@6"
+    ></script>
+  </head>
+  <body>
+    <div id="vis"></div>
+    <script>
+      (function (vegaEmbed) {
+        var restaurantsVizSpec = {
+          config: { view: { continuousWidth: 400, continuousHeight: 300 } },
+          hconcat: [
+            {
+              data: {
+                url:
+                  "https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/us-10m.json",
+                format: { feature: "states", type: "topojson" },
+              },
+              mark: "geoshape",
+              encoding: {
+                color: { type: "quantitative", field: "Number of Restaurant" },
+                opacity: {
+                  condition: { value: 1, selection: "selector006" },
+                  value: 0.2,
+                },
+                tooltip: [
+                  { type: "nominal", field: "state" },
+                  { type: "quantitative", field: "Number of Restaurant" },
+                  { type: "nominal", field: "url" },
+                ],
+              },
+              projection: { type: "albersUsa" },
+              selection: { selector006: { type: "multi", fields: ["state"] } },
+              transform: [
+                {
+                  lookup: "id",
+                  from: {
+                    data: { name: "data-9bf77b44b4d69b50236b4ed4348955f1" },
+                    key: "id",
+                    fields: ["Number of Restaurant", "state", "url"],
+                  },
+                },
+              ],
+            },
+            {
+              data: { name: "data-275a50d4c3cc3bc033686c66290b98bb" },
+              mark: "bar",
+              encoding: {
+                color: { type: "quantitative", field: "Number of Restaurant" },
+                opacity: {
+                  condition: { value: 1, selection: "selector006" },
+                  value: 0.2,
+                },
+                tooltip: [
+                  { type: "nominal", field: "state" },
+                  { type: "quantitative", field: "Number of Restaurant" },
+                  { type: "nominal", field: "url" },
+                ],
+                x: { type: "quantitative", field: "Number of Restaurant" },
+                y: { type: "nominal", field: "state", sort: "x" },
+              },
+              selection: { selector006: { type: "multi", fields: ["state"] } },
+              title: "Top 15 States by Number of Restaurant",
+            },
+          ],
+          $schema: "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+          datasets: {
+            "data-9bf77b44b4d69b50236b4ed4348955f1": [
+              {
+                id: 1,
+                state: "Alabama",
+                "Number of Restaurant": 127,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Alabama",
+              },
+              {
+                id: 2,
+                state: "Alaska",
+                "Number of Restaurant": 112,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Alaska",
+              },
+              {
+                id: 4,
+                state: "Arizona",
+                "Number of Restaurant": 1100,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Arizona",
+              },
+              {
+                id: 5,
+                state: "Arkansas",
+                "Number of Restaurant": 81,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Arkansas",
+              },
+              {
+                id: 6,
+                state: "California",
+                "Number of Restaurant": 8200,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=California",
+              },
+              {
+                id: 8,
+                state: "Colorado",
+                "Number of Restaurant": 923,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Colorado",
+              },
+              {
+                id: 9,
+                state: "Connecticut",
+                "Number of Restaurant": 93,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Connecticut",
+              },
+              {
+                id: 10,
+                state: "Delaware",
+                "Number of Restaurant": 112,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Delaware",
+              },
+              {
+                id: 11,
+                state: "District of Columbia",
+                "Number of Restaurant": 1900,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=DC",
+              },
+              {
+                id: 12,
+                state: "Florida",
+                "Number of Restaurant": 1400,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Miami%2C%20FL",
+              },
+              {
+                id: 13,
+                state: "Georgia",
+                "Number of Restaurant": 1300,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Georgia",
+              },
+              {
+                id: 15,
+                state: "Hawaii",
+                "Number of Restaurant": 803,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Hawaii",
+              },
+              {
+                id: 16,
+                state: "Idaho",
+                "Number of Restaurant": 119,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Idaho",
+              },
+              {
+                id: 17,
+                state: "Illinois",
+                "Number of Restaurant": 1500,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Illinois",
+              },
+              {
+                id: 18,
+                state: "Indiana",
+                "Number of Restaurant": 376,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Indiana",
+              },
+              {
+                id: 19,
+                state: "Iowa",
+                "Number of Restaurant": 103,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Iowa",
+              },
+              {
+                id: 20,
+                state: "Kansas",
+                "Number of Restaurant": 94,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Kansas",
+              },
+              {
+                id: 21,
+                state: "Kentucky",
+                "Number of Restaurant": 158,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Kentucky",
+              },
+              {
+                id: 22,
+                state: "Louisiana",
+                "Number of Restaurant": 265,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Louisiana",
+              },
+              {
+                id: 23,
+                state: "Maine",
+                "Number of Restaurant": 80,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Maine",
+              },
+              {
+                id: 24,
+                state: "Maryland",
+                "Number of Restaurant": 344,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Maryland",
+              },
+              {
+                id: 25,
+                state: "Massachusetts",
+                "Number of Restaurant": 966,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Massachusetts",
+              },
+              {
+                id: 26,
+                state: "Michigan",
+                "Number of Restaurant": 567,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Michigan",
+              },
+              {
+                id: 27,
+                state: "Minnesota",
+                "Number of Restaurant": 755,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Minnesota",
+              },
+              {
+                id: 28,
+                state: "Mississippi",
+                "Number of Restaurant": 52,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Mississippi",
+              },
+              {
+                id: 29,
+                state: "Missouri",
+                "Number of Restaurant": 301,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Missouri",
+              },
+              {
+                id: 30,
+                state: "Montana",
+                "Number of Restaurant": 23,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Montana",
+              },
+              {
+                id: 31,
+                state: "Nebraska",
+                "Number of Restaurant": 153,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Nebraska",
+              },
+              {
+                id: 32,
+                state: "Nevada",
+                "Number of Restaurant": 1100,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Nevada",
+              },
+              {
+                id: 33,
+                state: "New Hampshire",
+                "Number of Restaurant": 34,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=New%20Hampshire",
+              },
+              {
+                id: 34,
+                state: "New Jersey",
+                "Number of Restaurant": 130,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=New%20Jersey",
+              },
+              {
+                id: 35,
+                state: "New Mexico",
+                "Number of Restaurant": 195,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=New%20Mexico",
+              },
+              {
+                id: 36,
+                state: "New York",
+                "Number of Restaurant": 4800,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=New%20York",
+              },
+              {
+                id: 37,
+                state: "North Carolina",
+                "Number of Restaurant": 437,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=North%20Carolina",
+              },
+              {
+                id: 38,
+                state: "North Dakota",
+                "Number of Restaurant": 27,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=North%20Dakota",
+              },
+              {
+                id: 39,
+                state: "Ohio",
+                "Number of Restaurant": 377,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Ohio",
+              },
+              {
+                id: 40,
+                state: "Oklahoma",
+                "Number of Restaurant": 260,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Oklahoma",
+              },
+              {
+                id: 41,
+                state: "Oregon",
+                "Number of Restaurant": 1000,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Oregon",
+              },
+              {
+                id: 42,
+                state: "Pennsylvania",
+                "Number of Restaurant": 1100,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Pennsylvania",
+              },
+              {
+                id: 44,
+                state: "Rhode Island",
+                "Number of Restaurant": 144,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Rhode%20Island",
+              },
+              {
+                id: 45,
+                state: "South Carolina",
+                "Number of Restaurant": 100,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=South%20Carolina",
+              },
+              {
+                id: 46,
+                state: "South Dakota",
+                "Number of Restaurant": 26,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=South%20Dakota",
+              },
+              {
+                id: 47,
+                state: "Tennessee",
+                "Number of Restaurant": 160,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Tennessee",
+              },
+              {
+                id: 48,
+                state: "Texas",
+                "Number of Restaurant": 1600,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Texas",
+              },
+              {
+                id: 49,
+                state: "Utah",
+                "Number of Restaurant": 409,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Utah",
+              },
+              {
+                id: 50,
+                state: "Vermont",
+                "Number of Restaurant": 43,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Vermont",
+              },
+              {
+                id: 51,
+                state: "Virginia",
+                "Number of Restaurant": 67,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Virginia",
+              },
+              {
+                id: 53,
+                state: "Washington",
+                "Number of Restaurant": 1700,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Washington",
+              },
+              {
+                id: 54,
+                state: "West Virginia",
+                "Number of Restaurant": 22,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=West%20Virginia",
+              },
+              {
+                id: 55,
+                state: "Wisconsin",
+                "Number of Restaurant": 236,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Wisconsin",
+              },
+              {
+                id: 56,
+                state: "Wyoming",
+                "Number of Restaurant": 3,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Wyoming",
+              },
+              {
+                id: 72,
+                state: "Puerto Rico",
+                "Number of Restaurant": 87,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Puerto%20Rico",
+              },
+            ],
+            "data-275a50d4c3cc3bc033686c66290b98bb": [
+              {
+                id: 6,
+                state: "California",
+                "Number of Restaurant": 8200,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=California",
+              },
+              {
+                id: 36,
+                state: "New York",
+                "Number of Restaurant": 4800,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=New%20York",
+              },
+              {
+                id: 11,
+                state: "District of Columbia",
+                "Number of Restaurant": 1900,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=DC",
+              },
+              {
+                id: 53,
+                state: "Washington",
+                "Number of Restaurant": 1700,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Washington",
+              },
+              {
+                id: 48,
+                state: "Texas",
+                "Number of Restaurant": 1600,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Texas",
+              },
+              {
+                id: 17,
+                state: "Illinois",
+                "Number of Restaurant": 1500,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Illinois",
+              },
+              {
+                id: 12,
+                state: "Florida",
+                "Number of Restaurant": 1400,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Miami%2C%20FL",
+              },
+              {
+                id: 13,
+                state: "Georgia",
+                "Number of Restaurant": 1300,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Georgia",
+              },
+              {
+                id: 4,
+                state: "Arizona",
+                "Number of Restaurant": 1100,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Arizona",
+              },
+              {
+                id: 32,
+                state: "Nevada",
+                "Number of Restaurant": 1100,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Nevada",
+              },
+              {
+                id: 42,
+                state: "Pennsylvania",
+                "Number of Restaurant": 1100,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Pennsylvania",
+              },
+              {
+                id: 41,
+                state: "Oregon",
+                "Number of Restaurant": 1000,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Oregon",
+              },
+              {
+                id: 25,
+                state: "Massachusetts",
+                "Number of Restaurant": 966,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Massachusetts",
+              },
+              {
+                id: 8,
+                state: "Colorado",
+                "Number of Restaurant": 923,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Colorado",
+              },
+              {
+                id: 15,
+                state: "Hawaii",
+                "Number of Restaurant": 803,
+                url:
+                  "https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Hawaii",
+              },
+            ],
+          },
+        };
+        var embedOpt = { render: "svg", mode: "vega-lite" };
+
+        function showError(el, error) {
+          el.innerHTML =
+            '<div class="error" style="color:red;">' +
+            "<p>JavaScript Error: " +
+            error.message +
+            "</p>" +
+            "<p>This usually means there's a typo in your chart specification. " +
+            "See the javascript console for the full traceback.</p>" +
+            "</div>";
+          throw error;
+        }
+        const el = document.getElementById("vis");
+        vegaEmbed("#vis", spec, embedOpt).catch((error) =>
+          showError(el, error)
+        );
+      })(vegaEmbed);
+    </script>
+  </body>
+</html>

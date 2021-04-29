@@ -8,9 +8,10 @@ header {
 }
 #intro,
 #title {
-  width: 500px;
+  width: 600px;
   margin: 0 auto;
   position: relative;
+  font-weight: 900;
 }
 
 #myVid {

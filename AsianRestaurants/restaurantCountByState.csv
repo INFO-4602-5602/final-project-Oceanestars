@@ -1,0 +1,53 @@
+﻿id,state,Number of Restaurant,url
+1,Alabama,127,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Alabama
+2,Alaska,112,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Alaska
+4,Arizona,1100,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Arizona
+5,Arkansas,81,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Arkansas
+6,California,8200,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=California
+8,Colorado,923,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Colorado
+9,Connecticut,93,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Connecticut
+10,Delaware,112,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Delaware
+11,District of Columbia,1900,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=DC
+12,Florida,1400,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Miami%2C%20FL
+13,Georgia,1300,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Georgia
+15,Hawaii,803,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Hawaii
+16,Idaho,119,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Idaho
+17,Illinois,1500,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Illinois
+18,Indiana,376,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Indiana
+19,Iowa,103,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Iowa
+20,Kansas,94,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Kansas
+21,Kentucky,158,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Kentucky
+22,Louisiana,265,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Louisiana
+23,Maine,80,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Maine
+24,Maryland,344,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Maryland
+25,Massachusetts,966,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Massachusetts
+26,Michigan,567,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Michigan
+27,Minnesota,755,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Minnesota
+28,Mississippi,52,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Mississippi
+29,Missouri,301,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Missouri
+30,Montana,23,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Montana
+31,Nebraska,153,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Nebraska
+32,Nevada,1100,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Nevada
+33,New Hampshire,34,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=New%20Hampshire
+34,New Jersey,130,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=New%20Jersey
+35,New Mexico,195,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=New%20Mexico
+36,New York,4800,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=New%20York
+37,North Carolina,437,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=North%20Carolina
+38,North Dakota,27,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=North%20Dakota
+39,Ohio,377,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Ohio
+40,Oklahoma,260,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Oklahoma
+41,Oregon,1000,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Oregon
+42,Pennsylvania,1100,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Pennsylvania
+44,Rhode Island,144,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Rhode%20Island
+45,South Carolina,100,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=South%20Carolina
+46,South Dakota,26,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=South%20Dakota
+47,Tennessee,160,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Tennessee
+48,Texas,1600,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Texas
+49,Utah,409,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Utah
+50,Vermont,43,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Vermont
+51,Virginia,67,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Virginia
+53,Washington,1700,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Washington
+54,West Virginia,22,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=West%20Virginia
+55,Wisconsin,236,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Wisconsin
+56,Wyoming,3,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Wyoming
+72,Puerto Rico,87,https://www.yelp.com/search?find_desc=Asian%20Restaurant&find_loc=Puerto%20Rico
