@@ -16,6 +16,12 @@ header {
 }
 #intro {
   font-weight: 200;
+  width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+#projectIntro {
+  font-weight: 200;
   width: 600px;
   margin: 0 auto;
   position: relative;
@@ -31,4 +37,11 @@ h3 {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+blockquote {
+  margin: 0;
+  background: #eee;
+  padding: 1em;
+  border-radius: 1em;
 }
