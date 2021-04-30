@@ -18,7 +18,6 @@ function ChangeGraph() {
             vegaEmbed("#displayGraphAsian", spec, embedOpt)
               .catch(error => showError(el, error));
           })(vegaEmbed);
-
     }
     if (dropdownID.value == "1") {
         document.getElementById("titleGraphAsian").innerHTML = "Chinese Population in the United States";
@@ -1242,8 +1241,6 @@ function ChangeGraph() {
               showError(el, error)
             );
           })(vegaEmbed);
-
-
     }
     if (dropdownID.value == "2") {
         document.getElementById("titleGraphAsian").innerHTML = "Filipino Population in the United States";
@@ -1263,7 +1260,6 @@ function ChangeGraph() {
             vegaEmbed("#displayGraphAsian", spec, embedOpt)
               .catch(error => showError(el, error));
           })(vegaEmbed);
-
     }
     if (dropdownID.value == "3") {
         document.getElementById("titleGraphAsian").innerHTML = "Indian Population in the United States";
@@ -1283,8 +1279,6 @@ function ChangeGraph() {
             vegaEmbed("#displayGraphAsian", spec, embedOpt)
               .catch(error => showError(el, error));
           })(vegaEmbed);
-        
-
     }
     if (dropdownID.value == "4") {
         document.getElementById("titleGraphAsian").innerHTML = "Japanese Population in the United States";
@@ -1304,8 +1298,6 @@ function ChangeGraph() {
             vegaEmbed("#displayGraphAsian", spec, embedOpt)
               .catch(error => showError(el, error));
           })(vegaEmbed);
-      
-
     }
     if (dropdownID.value == "5") {
         document.getElementById("titleGraphAsian").innerHTML = "Korean Population in the United States";
@@ -1325,9 +1317,6 @@ function ChangeGraph() {
             vegaEmbed("#displayGraphAsian", spec, embedOpt)
               .catch(error => showError(el, error));
           })(vegaEmbed);
-      
-
-
     }
     if (dropdownID.value == "6") {
         document.getElementById("titleGraphAsian").innerHTML = "Vietnamese Population in the United States";
@@ -1347,7 +1336,6 @@ function ChangeGraph() {
             vegaEmbed("#displayGraphAsian", spec, embedOpt)
               .catch(error => showError(el, error));
           })(vegaEmbed);
-      
     }
     else {
         console.log("in else");

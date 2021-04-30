@@ -1,38 +1,59 @@
-# Final Project
+# Project Description
 
-For your final project, use the skills you've developed in this class to tackle a new problem. For example, you could develop a visualization for a complex dataset, construct a physicalization, visualize an algorithmic process, or run an experiment to explore graphical perception. Not many restrictions on this one other than it should demonstrate your mastery of the processes and ideas we talked about in class. Be creative and have fun!
+Our Final Project focuses on the Asian Community. With this project we wish to provide resources and interactive maps. We are focusing on three areas: Asian Demographic, Asian Hate Crime, and Asian Restaurants &
+Communities. The data from these maps were collected from diverse source. A special thank you to Stop AAPI for providing us with data and giving us the opportunity to gather primary data. The tools to build these visualization were primarily Altair (a python library).
 
-You are welcome to work on this project as an individual or in a small group. I recommend keeping groups between 2-4 members, but am happy to discuss exceptions if you have a strong reason to prefer a larger team. 
+# Deployment Link
 
-You will be graded on both the artifacts you generate as part of this project and a project write-up and presentation. Expectations for the artifacts will be provided as feedback for your proposal. Details about the proposal, post-mortem, and presentation are available on Canvas. 
+Deployment link - [https://infovisfinalproject-2cfac.web.app/](https://infovisfinalproject-2cfac.web.app/)
 
-## Write-Up
-You should approach the write-up like a research paper. It should contain the following sections:
+# Technology Stack
 
-* A 1-paragraph abstract that summarizes your motivating problem, what you did, and what you found.
-* An introduction that describes the motivating problem and why it's interesting or important.
-* A related work section that summarizes research related to your project (minimum eight citations).
-* A detailed description of your project and justifications for any design elements.
-* A discussion of what you found.
+- HTML
+- CSS
+- JS
+- Altair
+- Firebase
+- Google Map
+- Web Scraping
+- Figma
+- Git
+- Yelp API
 
-The write-up should be submitted as a PDF with a minimum of two pages (including figures and references) using the IEEE VIS Poster Format: <a href="http://junctionpublishing.org/vgtc/Tasks/camera.html">http://junctionpublishing.org/vgtc/Tasks/camera.html</a>
+# How to run this locally
 
-## Deliverables
-Please include any code, images of the artifact, and/or links to live deployments in your repository. You may provide links in the write-up, but should also include a copy of your code in this repository. If you choose to create a physicalization, your images and/or schematics should be part of the write-up but may also be included in your repository if you'd like to include a larger number of figures or other deliverables, such as a video walkthrough. 
+Clone the repo:
 
-## Submission
-Final projects technically are due 11:59pm on 4.29 (our last day of class); however, you will have a no-cost extension until 5.5 at 11:59pm (the day that would otherwise be a final exam, which we will not be having). Note that due to University grading deadlines, late projects will not be accepted.
+```
+git clone https://github.com/INFO-4602-5602/final-project-Oceanestars.git
+```
 
-Please upload all deliverables through GitHub Classroom. This includes any code, data, documentation, or write-up. If you have physical artifacts, please either reach out to me to set up an appointment to present your artifacts or submit an explanatory video and/or set of photographs.
+Start a Local server:
 
-## Grade Breakdown
-Proposal: 5 points
+```
+firebase serve
+```
 
-Artifact(s): 40 points
+# Resources
 
-Write-Up: 40 points
-
-Post-Mortem: 5 points
-
-Showcase Video: 10 points
-
+- M. Kornfield and H.Knowles, “Captain who said spa shootings suspect had ‘bad day’ no longer a spokesman on case, official says” Washington Post 3, March 18, 2021. [Online], Available: https://www.washingtonpost.com/nation/2021/03/17/jay-baker-bad-day/ [Accessed April. 29, 2021].
+- L. Fong, “After Atlanta shooting, protesters call for action, protection for Asian Americans” PBS, March 20 2021. [Online], Available: https://www.pbs.org/newshour/show/after-atlanta-shooting-protesters-call-for-action-protection-for-asian-americans. [Accessed April. 29, 2021].
+- B. Levin, “Report to the Nation: Anti-Asian Prejudice & Hate” Center for the Study of Hate and Extremism, California State University - San Bernardino.
+- Access here: https://www.csusb.edu/sites/default/files/FACT%20SHEET-%20Anti-Asian%20Hate%202020%20rev%203.21.21.pdf [Accessed April 29, 2021].
+- Stephen Smart, Keke Wu, & Danielle Albers Szafir. Color Crafting: Automating the Construction of Designer Quality Color Ramps. IEEE Transactions on Visualization and Computer Graphics, 26(1), 2020 (to appear). [Published as part of the Proceedings of IEEE VIS 2019]
+- Peter Litwinowicz and Lance Williams. Animating images with drawings. In Andrew Glassner, editor, Proceedings of SIGGRAPH ’94 (Orlando, Florida, July 24–29, 1994),Com- puter Graphics Proceedings, Annual Conference Series, pages 409–412. ACM SIGGRAPH, ACM Press, July 1994.
+- Farivar, Masood, Hate Crimes Targeting Asian Americans Spiked by 150% in Major US Cities (2021). https://www.voanews.com/usa/race-america/hate-crimes-targeting-asian-americans-spiked-150-major-us-cities
+- Batalova, Jeanne Batalova Mary Hanna and Jeanne. “Immigrants from Asia in the United States.” Migrationpolicy.Org, 9 Mar. 2021, https://www.migrationpolicy.org/article/immigrants-asia-united-states-2020.
+- Choropleth Map — Altair 4.1.0 Documentation. https://altair-viz.github.io/gallery/choropleth.html. Accessed 27 Apr. 2021.
+- "ASIAN ALONE OR IN COMBINATION WITH ONE OR MORE OTHER RACES, AND WITH ONE OR MORE ASIAN CATEGORIES FOR SELECTED GROUPS". United States Census Bureau. United States Department of Commerce. 2011. Archived from the original on February 12, 2020. Retrieved December 25, 2011.
+- “Python - Altair Choropleth Map, Color Highlight Based on Line Chart Selection.” Stack Overflow, https://stackoverflow.com/questions/63751130/altair-choropleth-map-color-highlight-based-on-line-chart-selection. Accessed 27 Apr. 2021.
+- Reese, Robert James. “List of Latitudes and Longitudes for Every State.” Ink Plant, https://inkplant.com/code/state-latitudes-longitudes. Accessed 26 Apr. 2021.
+- The Asian Population: 2010. p. 24.
+- The Asian Population 2010.Pdf. https://www.census.gov/content/dam/Census/library/publications/2012/dec/c2010br-11.pdf. Accessed 26 Apr. 2021.
+- “The Rise of Asian Americans.” Pew Research Center’s Social & Demographic Trends Project, 19 June 2012, https://www.pewresearch.org/social-trends/2012/06/19/the-rise-of-asian-americans/.
+- “Vega/Vega.” GitHub, https://github.com/vega/vega. Accessed 27 Apr. 2021.
+- R, Jeung. Stop AAPI Hate. Group Interview, Topic: "Stop AAPI Hate | Student Interviews." Zoom Interview. Online. Apr. 14, 2021.
+- https://medium.com/@sashavingardt/recipe-of-the-day-json-to-csv-6632423514d
+- Jaemin Jo, Frédéric Vernier, Pierre Dragicevic, Jean-Daniel Fekete. A Declarative Rendering Model for Multiclass Density Maps. IEEE Transactions on Visualization and Computer Graphics, Institute of Electrical and Electronics Engineers, 2019, 25 (1), pp.470-480. ff10.1109/TVCG.2018.2865141ff. ffhal-01848427f
+- https://abc7ny.com/chinatown-rotary-club-million-mask-challenge-nyc-covid-vaccine-coronavirus/10314124/
+- https://asiasociety.org/blog/asia/dietary-culture-asia
