@@ -28,6 +28,24 @@ Clone the repo:
 git clone https://github.com/INFO-4602-5602/final-project-Oceanestars.git
 ```
 
+Install Firebase:
+
+```
+npm install -g firebase-tools
+```
+
+If that doesn't work, try adding ``sudo`` to install Firebase (this will require your computer password):
+
+```
+sudo npm install -g firebase-tools
+```
+
+Log in to Firebase by typing the line below on terminal and typing your username and password on the pop up Firebase website:
+
+```
+firebase login
+```
+
 Start a Local server:
 
 ```
